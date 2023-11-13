@@ -1,2 +1,2 @@
 # tech-interview-sr
-A repository for technical interview projects geared towards experienced developers.
+A base solution intended as a starting point for our sr. level technical interviews
