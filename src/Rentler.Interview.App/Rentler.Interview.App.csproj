@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Rentler.Interview.Lib\Rentler.Interview.Lib.csproj" />
+  </ItemGroup>
+
 </Project>
