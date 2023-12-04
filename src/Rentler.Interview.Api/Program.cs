@@ -16,7 +16,13 @@ Log.Logger = new LoggerConfiguration().ReadFrom
 builder.WebHost.UseSerilog();
 
 // Add services to the container.
-builder.Services.ConfigureServices(builder.Configuration);
+var appSettingsSection = builder.Configuration.GetSection("AppSettings");
+var connectionStringsSection = builder.Configuration.GetSection("ConnectionStrings");
+
+builder.Services.Configure<AppSettings>(appSettingsSection);
+builder.Services.Configure<ConnectionStrings>(connectionStringsSection);
+
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
